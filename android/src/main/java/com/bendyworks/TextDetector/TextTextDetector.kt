@@ -2,17 +2,20 @@ package com.bendyworks.TextDetector
 
 import android.content.Context
 import android.net.Uri
+import android.util.Log
+import com.google.android.gms.vision.text.TextRecognizer
+import com.google.firebase.ml.common.FirebaseMLException
+import com.google.firebase.ml.common.modeldownload.FirebaseModelDownloadConditions
+import com.google.firebase.ml.common.modeldownload.FirebaseModelManager
+import com.google.firebase.ml.common.modeldownload.FirebaseRemoteModel
 import com.google.firebase.ml.vision.FirebaseVision
-import com.google.firebase.ml.vision.text.FirebaseVisionText
-import com.google.firebase.ml.vision.text.FirebaseVisionCloudTextRecognizerOptions
 import com.google.firebase.ml.vision.common.FirebaseVisionImage
-import com.google.firebase.ml.vision.common.FirebaseVisionImageMetadata
 import com.google.firebase.ml.vision.objects.FirebaseVisionObjectDetectorOptions
-import java.io.File
 import java.io.IOException
 
 
 class TextTextDetector {
+
   fun detectObjects(context: Context, fileUri: Uri, degrees: Int) {
     val image: FirebaseVisionImage
     try {
@@ -65,9 +68,10 @@ class TextTextDetector {
 
 
       val textDetector = FirebaseVision.getInstance().getOnDeviceTextRecognizer();
-      FirebaseVision.getInstance().
 
       println("detector: " + textDetector)
+
+
 
       textDetector.processImage(image)
         .addOnSuccessListener { detectedText ->
@@ -82,12 +86,12 @@ class TextTextDetector {
             println("cornerPoints: " + cornerPoints)
             println("text: " + text)
 
-            for (line in block.lines) {
-              println("line: " + line)
-              for (element in line.elements) {
-                println("element: " + element)
-              }
-            }
+//            for (line in block.lines) {
+//              println("line: " + line)
+//              for (element in line.elements) {
+//                println("element: " + element)
+//              }
+//            }
           }
         }
         .addOnFailureListener { e ->
@@ -98,5 +102,4 @@ class TextTextDetector {
       e.printStackTrace();
     }
   }
-
 }

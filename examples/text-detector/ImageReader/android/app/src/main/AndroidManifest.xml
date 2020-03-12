@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.bendyworks.TextDetector.ImageReader">
+    package="com.bendyworks.TextDetector.ImageReader"
+    android:installLocation="auto" >
 
     <application
         android:allowBackup="true"
@@ -8,7 +9,8 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true" >
 
         <activity
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
@@ -49,7 +51,7 @@
         has completed will produce no results.  -->
         <meta-data
           android:name="com.google.firebase.ml.vision.DEPENDENCIES"
-          android:value="ocr, " />
+          android:value="ocr" />
           <!-- To use multiple models: android:value="ocr,model2,model3" -->
     </application>
 
