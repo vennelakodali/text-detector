@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "691997873586",
+    "firebase_url": "https://text-detector-7c805.firebaseio.com",
+    "project_id": "text-detector-7c805",
+    "storage_bucket": "text-detector-7c805.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:691997873586:android:5bea4efc58d7ff2e0540ab",
+        "android_client_info": {
+          "package_name": "com.bendyworks.TextDetector.textdetector"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "691997873586-8cbqf304921b91f49sv4c2fq1mi0qcop.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC6ZANUkiP3Gf2jgkmxNg-DFXUT3EVnCM4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "691997873586-8cbqf304921b91f49sv4c2fq1mi0qcop.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

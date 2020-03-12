@@ -1,0 +1,8 @@
+{
+  "appId": "com.bendyworks.TextDetector.ImageReader",
+  "appName": "ImageReader",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "cordova": {}
+}
